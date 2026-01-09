@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 
 const App = () => {
   const [userdata, setUserData] = useState([]);
+  const [index, setIndex] = useState(1)
 
   const getData = async () => {
     const res = await axios.get('https://picsum.photos/v2/list?page=3&limit=30')
@@ -13,7 +14,7 @@ const App = () => {
 
   useEffect(() => {
     getData()
-  }, [])
+  }, [index])
 
 
   let printUserdata = <h3 className="text-gray-400"> No User Data </h3>
@@ -34,12 +35,22 @@ const App = () => {
 
   return (
     <div className='text-white bg-black h-screen p-4 overflow-auto'>
+      <div className="text-6xl bg-amber-700 fixed"> {index}</div>
       <div className="grid grid-cols-5 gap-4 w-full">
         {printUserdata}
       </div>
       <div className="flex justify-center gap-6 items-center p-4">
-        <button className="bg-yellow-500 text-sm text-black px-4 py-2 font-semibold rounded cursor-pointer active:scale-95"> Prev </button>
-        <button className="bg-yellow-500 text-sm text-black px-4 py-2 font-semibold rounded cursor-pointer active:scale-95"> Next </button>
+        <button onClick={() => {
+          if (index > 1) {
+            setIndex(index - 1)
+          }
+
+        }}
+          className="bg-yellow-500 text-sm text-black px-4 py-2 font-semibold rounded cursor-pointer active:scale-95"> Prev </button>
+        <button onClick={() => {
+          setIndex(index + 1)
+        }}
+          className="bg-yellow-500 text-sm text-black px-4 py-2 font-semibold rounded cursor-pointer active:scale-95"> Next </button>
 
       </div>
     </div>
