@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const App = () => {
   const [userdata, setUserData] = useState([]);
@@ -10,6 +10,11 @@ const App = () => {
     console.log(res.data);
 
   }
+
+  useEffect(() => {
+    getData()
+  }, [])
+  
 
   let printUserdata = "No User Data"
 
@@ -29,8 +34,6 @@ const App = () => {
 
   return (
     <div className='text-white bg-black h-screen p-4 overflow-auto'>
-      <button onClick={getData}
-        className='bg-green-600 text-white px-5 py-2 rounded m-4 active:scale-95'> Get Data </button>
       <div className="grid grid-cols-5 gap-4 w-full">
         {printUserdata}
       </div>
