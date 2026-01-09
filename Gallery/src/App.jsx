@@ -14,15 +14,15 @@ const App = () => {
   useEffect(() => {
     getData()
   }, [])
-  
 
-  let printUserdata = "No User Data"
+
+  let printUserdata = <h3 className="text-gray-400"> No User Data </h3>
 
   if (userdata.length > 0) {
     printUserdata = userdata.map((elem, idx) => (
       <div key={idx}>
         <a href={elem.url}>
-          <div  className="bg-white h-40 flex flex-col rounded-2xl">
+          <div className="bg-white h-40 flex flex-col rounded-2xl">
             <img src={elem.download_url} alt="Image" className="h-[85%] w-full object-cover rounded-2xl" />
             <h1 className="text-black text-center bold text-lg  ">{elem.author}</h1>
           </div>
@@ -36,6 +36,11 @@ const App = () => {
     <div className='text-white bg-black h-screen p-4 overflow-auto'>
       <div className="grid grid-cols-5 gap-4 w-full">
         {printUserdata}
+      </div>
+      <div className="flex justify-center gap-6 items-center p-4">
+        <button className="bg-yellow-500 text-sm text-black px-4 py-2 font-semibold rounded cursor-pointer active:scale-95"> Prev </button>
+        <button className="bg-yellow-500 text-sm text-black px-4 py-2 font-semibold rounded cursor-pointer active:scale-95"> Next </button>
+
       </div>
     </div>
 
