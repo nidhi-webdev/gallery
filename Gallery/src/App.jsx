@@ -6,7 +6,7 @@ const App = () => {
   const [index, setIndex] = useState(1)
 
   const getData = async () => {
-    const res = await axios.get('https://picsum.photos/v2/list?page=3&limit=30')
+    const res = await axios.get(`https://picsum.photos/v2/list?page=${index}&limit=30`)
     setUserData(res.data)
     console.log(res.data);
 
@@ -17,7 +17,7 @@ const App = () => {
   }, [index])
 
 
-  let printUserdata = <h3 className="text-gray-400"> No User Data </h3>
+  let printUserdata = <h3 className="text-gray-400"> Loading... </h3>
 
   if (userdata.length > 0) {
     printUserdata = userdata.map((elem, idx) => (
@@ -43,11 +43,13 @@ const App = () => {
         <button onClick={() => {
           if (index > 1) {
             setIndex(index - 1)
+            setUserData([])
           }
 
         }}
           className="bg-yellow-500 text-sm text-black px-4 py-2 font-semibold rounded cursor-pointer active:scale-95"> Prev </button>
         <button onClick={() => {
+          setUserData([])
           setIndex(index + 1)
         }}
           className="bg-yellow-500 text-sm text-black px-4 py-2 font-semibold rounded cursor-pointer active:scale-95"> Next </button>
