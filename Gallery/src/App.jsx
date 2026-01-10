@@ -35,7 +35,8 @@ const App = () => {
         {printUserdata}
       </div>
       <div className="flex justify-center gap-6 items-center p-4">
-        <button onClick={() => {
+        <button style={{opacity: index == 1 ? 0.5 : 1}}
+        onClick={() => {
           if (index > 1) {
             setIndex(index - 1)
             setUserData([])
