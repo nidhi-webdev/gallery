@@ -17,7 +17,7 @@ const App = () => {
   }, [index])
 
 
-  let printUserdata = <h3 className="text-gray-400"> Loading... </h3>
+  let printUserdata = <h3 className="text-gray-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"> Loading... </h3>
 
   if (userdata.length > 0) {
     printUserdata = userdata.map((elem, idx) => (
