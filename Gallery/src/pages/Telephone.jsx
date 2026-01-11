@@ -3,7 +3,7 @@ import React from 'react'
 const Telephone = () => {
   return (
     <div>
-      Telephone
+    <h1> Telephone page</h1>  
     </div>
   )
 }

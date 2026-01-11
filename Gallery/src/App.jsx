@@ -7,6 +7,7 @@ import About from './pages/About'
 import Notfound from './pages/Notfound'
 import Mobile from './pages/Mobile'
 import Telephone from './pages/Telephone'
+import Fax from './pages/Fax'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
         <Route path='/contact/mobile' element={<Mobile />} />
         <Route path='/contact/telephone' element={<Telephone />} />
+        <Route path='/contact/fax' element={<Fax />} />
 
         <Route path='/about' element={<About />} />
 
