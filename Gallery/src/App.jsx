@@ -1,19 +1,13 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Contact from './pages/Contact'
-import Home from './pages/Home'
-import About from './pages/About'
+import React from 'react'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-    <BrowserRouter>
-      
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/About' element={<About />} />
-          <Route path='/Contact' element={<Contact />} />
-        </Routes>
-      
-    </BrowserRouter>
+    <div className='h-screen bg-black text-white'>
+      <Navbar />
+      {/* <Footer /> */}
+    </div>
   )
 }
 
