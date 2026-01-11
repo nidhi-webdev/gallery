@@ -6,8 +6,8 @@ const Navbar = () => {
      <h2 className='text-xl font-bold'> My Page </h2>
      <div className='flex gap-8 text-xl font-bold'>
         <a href='/'>Home </a>
-        <a href='/'> Contact </a>
-        <a href='/'>About</a>
+        <a href='/contact'> Contact </a>
+        <a href='/about'>About</a>
      </div>
     </div>
   )
