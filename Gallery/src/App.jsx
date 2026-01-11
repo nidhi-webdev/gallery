@@ -1,4 +1,3 @@
-import React from 'react'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import { Route, Routes } from 'react-router-dom'
@@ -15,15 +14,15 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-         <Route path='/contact' element={<Contact />}>
-         <Route path='telephone' element={<Mobile />} />
-         <Route path='mobile' element={<Telephone />} />
-         </Route>
-          <Route path='/about' element={<About />} />
-          <Route path='*' element={<Notfound/>} />
-        <Route />
-        <Route />
-        </Routes>
+
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/contact/mobile' element={<Mobile />} />
+        <Route path='/contact/telephone' element={<Telephone />} />
+
+        <Route path='/about' element={<About />} />
+
+        <Route path='*' element={<Notfound />} />
+      </Routes>
       <Footer />
     </div>
   )
