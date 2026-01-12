@@ -9,7 +9,7 @@ const CourseDetails = () => {
 
     return (
         <div>
-            <h1> Course Details Page </h1>
+            <h1> {param.id} Course Details Page </h1>
         </div>
     )
 }
