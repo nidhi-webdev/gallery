@@ -4,15 +4,21 @@ const About = () => {
 
   const navigate = useNavigate('/')
 
-  const btnClicked = () => {
-    navigate('/')
 
-  }
 
   return (
     <div className="text-white">
-      <button onClick={btnClicked} className="bg-emerald-900 px-4 py-2 rounded m-4 font-medium" > Return Back to Home </button>
-      <h1> About </h1>
+      <button
+        onClick={() => {
+          navigate('/')
+        }} className="bg-emerald-900 px-4 py-2 rounded m-4 font-medium" > Return Back to Home </button>
+
+      <button
+        onClick={() => {
+          navigate(-1)
+        }} className="bg-emerald-900 px-4 py-2 rounded m-4 font-medium" >  Back  </button>
+
+      <h1> About Page </h1>
     </div>
   )
 }
