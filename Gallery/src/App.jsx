@@ -8,6 +8,8 @@ import Notfound from './pages/Notfound'
 import Mobile from './pages/Mobile'
 import Telephone from './pages/Telephone'
 import Fax from './pages/Fax'
+import Course from './pages/course'
+import CourseDetails from './pages/CourseDetails'
 
 const App = () => {
   return (
@@ -22,6 +24,9 @@ const App = () => {
         <Route path='/contact/fax' element={<Fax />} />
 
         <Route path='/about' element={<About />} />
+
+        <Route path='/course' element={<Course />} />
+        <Route path='/course/:id' element={<CourseDetails />} />
 
         <Route path='*' element={<Notfound />} />
       </Routes>
