@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const ThemeContext = () => {
+export const ThemeContext = (props) => {
   return (
     <div>
-      Theme Context
+      {props.children}
     </div>
   )
 }
