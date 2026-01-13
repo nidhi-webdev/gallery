@@ -2,7 +2,7 @@ import React from 'react'
 
 const Nav2 = () => {
   return (
-    <div>
+    <div className='flex gap-32'>
       <h4>Home </h4>
       <h4> Contact </h4>
       <h4> About </h4>
