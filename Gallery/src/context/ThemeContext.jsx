@@ -4,7 +4,7 @@ export const ThemeDataContext = createContext()
 
 export const ThemeContext = (props) => {
     return (
-        <ThemeDataContext>
+        <ThemeDataContext value="Nidhi">
             {props.children}
         </ThemeDataContext> 
     )
