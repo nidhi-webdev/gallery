@@ -1,12 +1,13 @@
 import React from 'react'
 
-const Nav2 = () => {
+const Nav2 = (props) => {
   return (
     <div className='flex gap-32'>
       <h4>Home </h4>
       <h4> Contact </h4>
       <h4> About </h4>
       <h4> Services </h4>
+      <h4> {props.theme} </h4>
     </div>
   )
 }
