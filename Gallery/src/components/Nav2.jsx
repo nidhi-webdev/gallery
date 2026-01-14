@@ -4,8 +4,10 @@ import { ThemeDataContext } from "../context/ThemeContext"
 
 
 const Nav2 = () => {
-  const dataFromContext = useContext(ThemeDataContext)
-  console.log("From Nav2", dataFromContext );
+  const [theme, setTheme] = useContext(ThemeDataContext)
+  console.log("Nav2", theme);
+  
+  
   
 
   return (
@@ -14,7 +16,7 @@ const Nav2 = () => {
       <h4> Contact </h4>
       <h4> About </h4>
       <h4> Services </h4>
-      <h4> {dataFromContext} </h4>
+      <h4>  </h4>
     </div>
   )
 }
