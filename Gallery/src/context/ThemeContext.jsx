@@ -3,8 +3,12 @@ import { createContext } from 'react'
 export const ThemeDataContext = createContext()
 
 export const ThemeContext = (props) => {
+
+const [theme, setTheme] = useState("light")
+
+
     return (
-        <ThemeDataContext.Provider value="Nidhi">
+        <ThemeDataContext.Provider value={[theme, setTheme]}>
             {props.children}
         </ThemeDataContext.Provider> 
     )
