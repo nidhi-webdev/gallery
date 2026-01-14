@@ -4,9 +4,9 @@ export const ThemeDataContext = createContext()
 
 export const ThemeContext = (props) => {
     return (
-        <ThemeDataContext value="Nidhi">
+        <ThemeDataContext.Provider value="Nidhi">
             {props.children}
-        </ThemeDataContext> 
+        </ThemeDataContext.Provider> 
     )
 }
 
