@@ -4,15 +4,14 @@ import { ThemeDataContext } from '../context/ThemeContext'
 
 const Navbar = () => {
 
-  const dataFromContext = useContext(ThemeDataContext)
-  console.log(dataFromContext);
+  const [theme] = useContext(ThemeDataContext)
   
 
   return (
-    <div className='flex  bg-sky-300 justify-between px-20 py-10 text-xl text-black bold'>
+    <div className={theme}>
       Navbar
 
-      <h2>  {dataFromContext} </h2>
+      <h2>   </h2>
       <Nav2 />
     </div>
   )
